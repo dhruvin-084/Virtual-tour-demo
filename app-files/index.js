@@ -119,7 +119,16 @@
   sound.style.display = "none";
   document.body.appendChild(sound);
   sound.load();
-  sound.play();
+  var promise = sound.play();
+  
+  if (promise !== undefined) {
+  promise.then(_ => {
+    playAudio();
+  }).catch(error => {
+    playAudio();
+  });
+}else{
+  playAudio();
 
   function playAudio(){
     sound.play();
