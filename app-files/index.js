@@ -117,6 +117,7 @@
   sound.setAttribute("controls", "none");
   sound.style.display = "none";
   document.body.appendChild(sound);
+  sound.load();
   sound.play();
 
   function playAudio(){
