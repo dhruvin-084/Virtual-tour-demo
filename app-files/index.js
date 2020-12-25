@@ -115,6 +115,7 @@
   sound.src = "audio/pianoLoop2.wav";
   sound.setAttribute("preload", "auto");
   sound.setAttribute("controls", "none");
+  sound.setAttribute("autoplay", "true");
   sound.style.display = "none";
   document.body.appendChild(sound);
   sound.load();
