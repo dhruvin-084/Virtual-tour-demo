@@ -125,6 +125,7 @@
   promise.then(_ => {
     playAudio();
   }).catch(error => {
+    console.log(error);
     playAudio();
   });
 }else{
